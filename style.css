@@ -473,9 +473,12 @@ nav.shift ul li a {
   }
   
   .about-containers {
-    
-    margin-bottom: 2rem;
-    margin-top: 2rem;
+    display: flex;
+  gap: 2rem;
+  flex-direction: column; /* Change to column */
+    margin-bottom: 0rem;
+    margin-top: 5rem;
+    margin-left: 500px;
   }
   
   .about-details-container {
@@ -485,12 +488,6 @@ nav.shift ul li a {
     overflow-x: hidden;
   }
 
-
-.about-containers {
-  display: flex;
-  gap: 2rem;
-  flex-direction: column; /* Change to column */
-}
 
   .about-pic {
     border-radius: 2rem;
@@ -505,6 +502,23 @@ nav.shift ul li a {
     right: 0rem;
     bottom: 2.5rem;
   }
+
+
+  .about_text_cont{
+    position: absolute;
+    top: 9%; /* Adjust as needed */
+    left: 11%; /* Adjust as needed */
+    transform: translate(-50%, -50%); /* Center the text horizontally and vertically */
+    width: auto; /* Adjust the width as needed */
+    max-width: 80%; /* Limit the maximum width if necessary */
+  }
+  
+  .about_text{
+    text-align: center; /* Center-align the text */
+    color: white; /* Set text color */
+    font-size: 60px;
+  }
+  
   
   .details-container_edu {
     
@@ -512,16 +526,15 @@ nav.shift ul li a {
     flex: 1;
     background: white;
     border-radius: 2rem;
-    border: rgb(53, 53, 53) 0.1rem solid;
     border-color: rgb(163, 163, 163);
     text-align: center;
     margin-bottom: 0.1rem; /* Add margin bottom for spacing */
     width: 250px; /* Adjust width as needed */
   height: 150px; 
-    margin-left: 200px; /* Move boxes to the right */
+    margin-left: 600px; /* Move boxes to the right */
     overflow-x: hidden;
-    opacity: 0.5;
-
+    opacity: 0.8;
+    box-shadow: 0px 0px 20px rgb(112, 112, 112)
   }
 
 
@@ -529,18 +542,18 @@ nav.shift ul li a {
     
     padding: 1.5rem;
     flex: 1;
-    background: white;
+    background: rgb(255, 255, 255);
     border-radius: 2rem;
-    border: rgb(53, 53, 53) 0.1rem solid;
     border-color: rgb(163, 163, 163);
     text-align: center;
-    margin-bottom: 0.1rem; /* Add margin bottom for spacing */
     width: 250px; /* Adjust width as needed */
   height: 150px; 
-    margin-left: 200px; /* Move boxes to the right */
+    margin-left: 600px; /* Move boxes to the right */
     overflow-x: hidden;
 
-    opacity: 0.5;
+    opacity: 0.8;
+    box-shadow: 0px 0px 20px rgb(112, 112, 112)
+
     
 
   }
@@ -575,7 +588,7 @@ nav.shift ul li a {
 
 .text-container {
   position: absolute;
-  top: 80%; /* Adjust as needed */
+  top: 20%; /* Adjust as needed */
   left: 20%; /* Adjust as needed */
   transform: translate(-50%, -50%); /* Center the text container */
   width: 80%; /* Adjust the width as needed */
@@ -585,18 +598,19 @@ nav.shift ul li a {
 
 .Auc-box {
   display: none; /* Initially hide the Auc-box */
-  padding: 1.5rem;
+  padding: 1.2rem;
   background: white;
-  border-radius: 2rem;
+  border-radius: 1rem;
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
   text-align: center;
-  width: 110px; /* Adjust width as needed */
+  width:100px; /* Adjust width as needed */
   height: 30px;
   position: absolute; /* Position the element relative to its closest positioned ancestor */
-  top: 360px; /* Adjust the top position */
-  left: 1225px; /* Adjust the left position */
+  top: 600px; /* Adjust the top position */
+  left: 1340px; /* Adjust the left position */
   opacity: 0.5;
+
 }
 
 .details-container_edu:nth-child(2):hover + .Auc-box {
@@ -612,10 +626,11 @@ nav.shift ul li a {
 }
 
 .section__text__p1_about{
-  text-align: center;
-    margin-bottom: 1rem;
+  text-align: left;
+    margin-bottom: 0.5rem;
+    margin-right: -4rem;
     font-size: 1.75rem;
-
+    color: white;
 
 }
 
@@ -625,7 +640,7 @@ nav.shift ul li a {
 }
 
 
-#Experience{
+#experience{
   display: flex;
     height: 100vh; /* Change the height as needed */
     width: 100%;
@@ -666,58 +681,228 @@ nav.shift ul li a {
 
 .article-container {
   display: flex;
-  text-align: initial;
-  flex-wrap: wrap;
-  flex-direction: row;
-  gap: 2.5rem;
-  justify-content: space-around;
-  
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding: 0px;
+  gap: 0rem;
 }
 
-article {
-  display: flex;
-  width: 10rem;
-  justify-content: space-around;
-  gap: 0.5rem;
-}
 
-article .icon {
-  cursor: default;
+.article-container h3,
+.article-container p {
+  white-space: nowrap;
 }
 
 
 
 .exp-details-container1 {
     
-  padding: 1.5rem;
+  padding: 1rem;
   flex: 1;
   background: white;
   border-radius: 2rem;
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
-  text-align: center;
-  margin-bottom: 0.1rem; /* Add margin bottom for spacing */
-  width: 600px; /* Adjust width as needed */
-height: 250px; 
-  margin-left: 150px; /* Move boxes to the right */
-  
+  text-align: center; /* Add margin bottom for spacing */
+  width: 520px; /* Adjust width as needed */
+  height: 350px; 
+  margin-left: -100px; /* Move boxes to the right */
+  margin-top: -350px;
+  box-shadow: 1px 1px 50px rgba(255, 255, 255, 0.23)
 
 }
 
 .exp-details-container2 {
     
-  padding: 1.5rem;
+  padding: 1rem;
   flex: 1;
   background: white;
   border-radius: 2rem;
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
-  text-align: center;
-  margin-bottom: 0.1rem; /* Add margin bottom for spacing */
-  width: 600px; /* Adjust width as needed */
-height: 250px; 
-  margin-left: 800px; /* Move boxes to the right */
+  text-align: center; /* Add margin bottom for spacing */
+  width: 550px; /* Adjust width as needed */
+  height: 350px;
+  margin-left: 450px; /* Move boxes to the right */
+  margin-top: -300px;
+  box-shadow: 1px 1px 50px rgb(0, 0, 0)
+
   
 
 }
 
+#projects {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Align items vertically centered */
+  height: 100vh; /* Change the height as needed */
+  width: 100%; /* Set width to 100% */
+  background-image: url('https://img.freepik.com/free-vector/dark-black-background-design-with-stripes_1017-38064.jpg'); /* Specify your background image URL */
+  background-repeat: no-repeat; /* Prevent the background image from repeating */
+  background-size: cover; /* Cover the entire section */
+  background-position: center; /* Center the background image */
+}
+
+.section-container_project {
+  gap: 4rem;
+  height: 80%;
+}
+
+.project_text_cont{
+  position: absolute;
+  top: 9%; /* Adjust as needed */
+  left: 11%; /* Adjust as needed */
+  transform: translate(-50%, -50%); /* Center the text horizontally and vertically */
+  width: auto; /* Adjust the width as needed */
+  max-width: 80%; /* Limit the maximum width if necessary */
+  
+}
+
+.project_text{
+    text-align: center; /* Center-align the text */
+    color: white; /* Set text color */
+    font-size: 60px;
+}
+
+
+.project_text_sub{
+  text-align: center; /* Center-align the text */
+  color: white; /* Set text color */
+  font-size: 30px;
+  position: absolute;
+  top: 90%; /* Adjust as needed */
+  left: 2%;
+}
+
+
+.project-details-container{
+  justify-content: center;
+  flex-direction: column;
+  opacity: 0;
+  overflow-x: hidden;
+}
+
+
+.project-containers{
+display: flex;
+gap: 2rem;
+flex-direction: column; /* Change to column */
+}
+
+.project-containers{
+  margin-left: 800px;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.text-container_p1{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding: 0px;
+  gap: 0rem;
+  position: absolute;
+  top: 80%; /* Adjust as needed */
+  left: 21.5%; /* Adjust as needed */
+  transform: translate(-50%, -50%); /* Center the text container */
+  width: 80%; /* Adjust the width as needed */
+  max-width: 600px; /* Limit the maximum width if necessary */
+  text-align: justify; /* Center-align the text */
+}
+
+.section__text__p1_details{
+  color: white;
+   
+
+}
+
+#contact {
+  display: flex;
+    justify-content: center;
+    gap: 5rem;
+    height: 55vh;
+}
+
+.contact_text{
+  text-align: center; /* Center-align the text */
+    color: white; /* Set text color */
+    font-size: 60px;
+    margin-top: 50px;
+}
+.contact_text2{
+  text-align: center; /* Center-align the text */
+    color: white; /* Set text color */
+    font-size: 40px;
+    margin-top: 70px;
+}
+
+/* this card is inspired form this - https://georgefrancis.dev/ */
+
+.card {
+  --border-radius: 0.75rem;
+  --primary-color: #434343;
+  --secondary-color: #3c3852;
+  width: 400px;
+  font-family: "Arial";
+  padding: 2rem 2rem;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  background: #f1f1f3;
+  box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 3%);
+  position: relative;
+  margin-left: 20px;
+  margin-bottom: 2rem;
+  margin-top: -25rem;
+
+}
+
+.card > * + * {
+  margin-top: 1.1em;
+}
+
+.card .card__content {
+  color: var(--secondary-color);
+  font-size: 0.86rem;
+}
+
+.card .card__title {
+  padding: 0;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.card .card__date {
+  color: #6e6b80;
+  font-size: 0.8rem;
+}
+
+.card .card__arrow {
+  position: absolute;
+  background: var(--primary-color);
+  padding: 1rem 2rem;
+  border-top-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+  bottom: 0;
+  right: 0;
+  transition: 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card svg {
+  transition: 0.2s;
+}
+
+/* hover */
+.card:hover .card__title {
+  color: var(--primary-color);
+}
+
+.card:hover .card__arrow {
+  background: #111;
+}
+
+.card:hover .card__arrow svg {
+  transform: translateX(20px);
+}

@@ -14,7 +14,7 @@
         <div>
             <ul class="nav-links"> 
                 <li> <a href="#about">About</a></li>
-                <li> <a href="#experience">Experience</a></li>
+                <li> <a href="#about">Experience</a></li>
                 <li> <a href="#projects">Projects</a></li>
                 <li> <a href="#contact">Contact</a></li>
             </ul>
@@ -30,7 +30,7 @@
         </div>
         <div class = "menu-links">
             <li> <a href="#about" onclick="toggleMenu()">About</a></li>
-            <li> <a href="#experience" onclick="toggleMenu()">Experience</a></li>
+            <li> <a href="#about" onclick="toggleMenu()">Experience</a></li>
             <li> <a href="#projects" onclick="toggleMenu()">Projects</a></li>
             <li> <a href="#contact" onclick="toggleMenu()">Contact</a></li>
 
@@ -39,7 +39,7 @@
         </div>
     </nav>
     <section id="profile">
-        
+      
         <div class = "section__pic-container">
             <img src="./assets/Nashat-removebg.png" alt="Abdullah Nashat profile-pic">
         </div>
@@ -48,7 +48,7 @@
             <h1 class = "title"> Abdullah Nashat</h1>
             <p class = "section__text__p1">Data Analyst & Business Analyst</p>
         <div class = "btn-container" >
-            <button class="btn btn-color-2" onclick="window.open('./assets/Abdullah_Nashat_Resume.pdf')" style=" font-size: 18px; font-weight: 600; letter-spacing: 2px; font-family: 'Poppins', sans-serif;">Download CV</button>
+            <button class="btn btn-color-2" onclick="window.open('./assets/Abdullah Nashat Resume.pdf')" style=" font-size: 18px; font-weight: 600; letter-spacing: 2px; font-family: 'Poppins', sans-serif;">Download CV</button>
 
             <button class= "btn2 btn-color-1" onclick="location.href= './#contact'" style=" font-size: 18px; font-weight: 600; letter-spacing: 2px; font-family: 'Poppins', sans-serif;">Contact Info</button>
         </div>
@@ -62,14 +62,13 @@
 
 </section>
 <section id="about">
+  <div class= about_text_cont  >
+    <h1 class = about_text> Experience </h1>
+  </div>
   <div class="section-container_about">
-    <div class="section__pic-container_about">
-      <img
-        src="./assets/about-pic.png"
-        alt="Profile picture"
-        class="about-pic"
-      />
-    </div>
+    
+      
+      
     <div class="about-details-container" >
       <div class="about-containers">
         <div class="details-container_exp" id="about-slider">
@@ -79,7 +78,7 @@
             class="icon"
           />
           <h3>Experience</h3>
-          <p>2+ years <br />Frontend Development</p>
+          <p>5+ Months <br />Data engineering intern at KnowledgeNet</p>
         </div>
         <div class="details-container_edu" id ="edu-container" >
           <img
@@ -88,7 +87,7 @@
             class="icon"
           />
           <h3>Education</h3>
-          <p>B.Sc. Bachelors Degree<br />M.Sc. Masters Degree</p>
+          <p>B.Sc. Bachelors Degree<br />The American university in Cairo</p>
         </div>
       </div>
       
@@ -102,12 +101,117 @@
           />
 
     </div>
-    <div class="text-container">
-      <p class="section__text__p1_about">Get To Know More</p>
+    <div class="exp-details-container1">
+      <h2 class="experience-sub-title">Scripting and developing</h2>
+      <div class="article-container">
+        <article>
+          <img
+            src="./assets/checkmark.png"
+            alt="Experience icon"
+            class="icon"
+          />
+          <div>
+            <h3>Python</h3>
+            <p>Pandas
+              <br>NumPy
+              <br>SciPy
+              <br>Matplotlib
+              <br>Web scraping tools</p>
+          </div>
+        </article>
+        <article>
+          <img
+            src="./assets/checkmark.png"
+            alt="Experience icon"
+            class="icon"
+          />
+          <div>
+            <h3>SQL</h3>
+            <p>SQL Server
+              <br>MySQL
+              <br>PostgreSQL</p>
+          </div>
+        </article>
+        
+        <article>
+          <img
+            src="./assets/checkmark.png"
+            alt="Experience icon"
+            class="icon"
+          />
+          <div>
+            <h3>other languages</h3>
+            <p>
+            PySpark
+            <br>C/C++ 
+            <br> C#
+            <br>MATLAB 
+            <br>JavaScript 
+            <br>CSS
+            <br>HTML
+            <br>Git</p>
+          </div>
+        </article>
+        
+      </div>
+    </div>
 
-      <p>
-        Fresh Computer Engineering graduate with excellent analytical and critical thinking skills. Acquired high level of software development skills through university studies and side projects. Currently interested in data and business analysis full-time jobs.
-      </p>
+    
+
+
+    <div class="exp-details-container2">
+      <h2 class="experience-sub-title">Data management & modeling & visualization</h2>
+      <div class="article-container">
+        <article>
+          <img
+            src="./assets/checkmark.png"
+            alt="Experience icon"
+            class="icon"
+          />
+          <div>
+            <h3>Microsoft Power BI</h3>
+            <p></p>
+          </div>
+        </article>
+        
+        <article>
+          <img
+            src="./assets/checkmark.png"
+            alt="Experience icon"
+            class="icon"
+          />
+          <div>
+            <h3>Excel </h3>
+            <p>VLookup
+               <br>Conditional Formatting
+               <br>
+               Pivot Tables</p>
+          </div>
+        </article>
+        <article>
+          <img
+            src="./assets/checkmark.png"
+            alt="Experience icon"
+            class="icon"
+          />
+          <div>
+            <h3>Microsoft Azure</h3>
+            <p>DataBricks
+              <br>Azure Data Lake
+              <br>Azure Data Warehouse 
+              <br>Azure Synapse Analytics</p>
+          </div>
+        </article>
+        
+      </div>
+    </div>
+
+
+    
+
+    <div class="text-container">
+
+      
     </div>
 
   </div>
@@ -125,141 +229,81 @@
         
 
 
-  <section id ="Experience">
-    <div class= exp_text_cont  >
-    <h1 class = exp_text> Experience </h1>
+  
+
+
+
+
+</section>
+<section id="projects">
+  <div class= project_text_cont  >
+    <h1 class = project_text> Projects </h1>
+    <h1 class = project_text_sub> Project 1 </h1>
   </div>
-  <div class="experience-details-container">
-    <div class="exp-containers">
-      <div class="exp-details-container1">
-        <h2 class="experience-sub-title">Frontend Development</h2>
-        <div class="article-container">
-          <article>
-            <img
-              src="./assets/checkmark.png"
-              alt="Experience icon"
-              class="icon"
-            />
-            <div>
-              <h3>HTML</h3>
-              <p>Experienced</p>
-            </div>
-          </article>
-          <article>
-            <img
-              src="./assets/checkmark.png"
-              alt="Experience icon"
-              class="icon"
-            />
-            <div>
-              <h3>CSS</h3>
-              <p>Experienced</p>
-            </div>
-          </article>
-          <article>
-            <img
-              src="./assets/checkmark.png"
-              alt="Experience icon"
-              class="icon"
-            />
-            <div>
-              <h3>SASS</h3>
-              <p>Intermediate</p>
-            </div>
-          </article>
-          <article>
-            <img
-              src="./assets/checkmark.png"
-              alt="Experience icon"
-              class="icon"
-            />
-            <div>
-              <h3>JavaScript</h3>
-              <p>Basic</p>
-            </div>
-          </article>
-          <article>
-            <img
-              src="./assets/checkmark.png"
-              alt="Experience icon"
-              class="icon"
-            />
-            <div>
-              <h3>TypeScript</h3>
-              <p>Basic</p>
-            </div>
-          </article>
-          <article>
-            <img
-              src="./assets/checkmark.png"
-              alt="Experience icon"
-              class="icon"
-            />
-            <div>
-              <h3>Material UI</h3>
-              <p>Intermediate</p>
-            </div>
-          </article>
-        </div>
+  
+  <div class="section-container_project">
+   
+    <div class="project-details-container" >
+      <div class="project-containers">
+        <iframe title="bike store analysis" width="800" height="500" src="https://app.powerbi.com/view?r=eyJrIjoiZTUyMGY3M2QtZTNmMC00YjMzLWExYmMtM2RjMDU0MDBhMDg4IiwidCI6ImM3OTQ2N2I4LWI5Y2YtNGIzYS05ZmJhLTAwOWE1MmQ1NDRiYiIsImMiOjF9&pageName=ReportSectiond1b8c8906e605dd82cd0" frameborder="0" allowFullScreen="true"></iframe>
+
       </div>
-      <div class="exp-details-container2">
-        <h2 class="experience-sub-title">Frontend Development</h2>
-        <div class="article-container">
-          <article>
-            <img
-              src="./assets/checkmark.png"
-              alt="Experience icon"
-              class="icon"
-            />
-            <div>
-              <h3>PostgreSQL</h3>
-              <p>Basic</p>
-            </div>
-          </article>
-          <article>
-            <img
-              src="./assets/checkmark.png"
-              alt="Experience icon"
-              class="icon"
-            />
-            <div>
-              <h3>Node JS</h3>
-              <p>Intermediate</p>
-            </div>
-          </article>
-          <article>
-            <img
-              src="./assets/checkmark.png"
-              alt="Experience icon"
-              class="icon"
-            />
-            <div>
-              <h3>Express JS</h3>
-              <p>Intermediate</p>
-            </div>
-          </article>
-          <article>
-            <img
-              src="./assets/checkmark.png"
-              alt="Experience icon"
-              class="icon"
-            />
-            <div>
-              <h3>Git</h3>
-              <p>Intermediate</p>
-            </div>
-          </article>
-        </div>
-      </div>
+      
     </div>
+   
+    <div class="card">
+      
+      <h3 class="card__title">Bike Store analysis
+        
+
+      </h3>
+      <a href="https://github.com/n42at/Bike-store-AdventureWorks-analysis/tree/main">
+      <p class="card__content">data analysis project utilizing AdventureWorks dataset (click to open project files on github) </p>
+      <div class="card__date">
+          10 October, 2023
+      </div>
+      <div class="card__arrow">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="15" width="15">
+              <path fill="#fff" d="M13.4697 17.9697C13.1768 18.2626 13.1768 18.7374 13.4697 19.0303C13.7626 19.3232 14.2374 19.3232 14.5303 19.0303L20.3232 13.2374C21.0066 12.554 21.0066 11.446 20.3232 10.7626L14.5303 4.96967C14.2374 4.67678 13.7626 4.67678 13.4697 4.96967C13.1768 5.26256 13.1768 5.73744 13.4697 6.03033L18.6893 11.25H4C3.58579 11.25 3.25 11.5858 3.25 12C3.25 12.4142 3.58579 12.75 4 12.75H18.6893L13.4697 17.9697Z"></path>
+          </svg>
+      </div>
+      </a>
   </div>
+    <div class="text-container_p1">
+      <p class="section__text__p1_about">Bike Store analysis – Personal Project </p>
+
+      <p class="section__text__p1_details" >
+        •	Leveraged DAX for comprehensive data analysis and visualization of AdventureWorks Bikestore dataset.
+        <br>•	Integrated data cleansing and preprocessing procedures to ensure data accuracy and consistency.
+        <br>•	Developed interactive graphical interface using Power BI to showcase key performance indicators and facilitate data exploration.
+        <br>•	Implemented dynamic features like slicers, filters, and drill-down functionalities for deeper insights.
+        <br>•	Empowered stakeholders with actionable insights for informed decision-making and improved performance monitoring.
+
+      </p>
+    </div>
+
+  </div>
+  
   <img
     src="./assets/arrow.png"
     alt="Arrow icon"
     class="icon arrow"
-    onclick="location.href='./#projects'"
+    onclick="location.href='./#experience'"
   />
-  </section>
+
+  
+</section>
+
+<section id="contact">
+  <div class= about_text_cont  >
+    <h1 class = contact_text> Contacts </h1>
+  </div>
+
+  <div>
+    <h1 class = contact_text2> ✉: <a href="">Abdullahnashat@aucegypt.edu</a> </h1>
+    <h1 class = contact_text2> ✆: <a href="">+20 01551554334</a> </h1>
+  </div>
+</section>
     <script>
         // Dynamically load JavaScript file
         function loadScript(url) {

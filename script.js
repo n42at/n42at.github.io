@@ -36,6 +36,21 @@ window.addEventListener('scroll', function() {
   });
 
 
+  window.addEventListener('scroll', function() {
+    const slider = document.getElementById('about-slider');
+    const sliderPosition = slider.getBoundingClientRect().top;
+    const screenPosition = window.innerHeight / 1.5;
+  
+    if (sliderPosition < screenPosition) {
+      const detailContainers = document.querySelectorAll('.project-details-container');
+      detailContainers.forEach(container => {
+        container.classList.add('animate-slider');
+      });
+    }
+  });
+
+
+
  // Get references to the education container and the Auc-box
 const eduContainer = document.getElementById('edu-container');
 const aucBox = document.getElementById('Auc-box');
