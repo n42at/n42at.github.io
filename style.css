@@ -630,6 +630,15 @@ nav.shift ul li a {
 
 }
 
+.section__text__p1_about_epl{
+  text-align: left;
+    margin-bottom: 0.5rem;
+    margin-right: -1rem;
+    font-size: 1.75rem;
+    color: white;
+
+}
+
 
 .text-container p{
   color: white;
@@ -806,11 +815,31 @@ flex-direction: column; /* Change to column */
   text-align: justify; /* Center-align the text */
 }
 
+.text-container_p1_epl{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding: 0px;
+  gap: 0rem;
+  position: absolute;
+  top: 80%; /* Adjust as needed */
+  left: 19%; /* Adjust as needed */
+  transform: translate(-50%, -50%); /* Center the text container */
+  width: 80%; /* Adjust the width as needed */
+  max-width: 500px; /* Limit the maximum width if necessary */
+  text-align: justify; /* Center-align the text */
+}
 .section__text__p1_details{
   color: white;
-   
+  
 
 }
+
+
+.section__text__p1_details_epl{
+  margin-bottom: 0.5rem;
+  margin-right: -11rem;
+color: white;}
 
 #contact {
   display: flex;
@@ -848,7 +877,7 @@ flex-direction: column; /* Change to column */
   position: relative;
   margin-left: 20px;
   margin-bottom: 2rem;
-  margin-top: -25rem;
+  margin-top: -30rem;
 
 }
 
