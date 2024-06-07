@@ -1,6 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script src="https://cdn.amplitude.com/libs/analytics-browser-2.7.4-min.js.gz"></script>
+  <script src="https://cdn.amplitude.com/libs/plugin-session-replay-browser-1.2.3-min.js.gz"></script>
+  <script src="https://cdn.amplitude.com/libs/plugin-autocapture-browser-0.9.0-min.js.gz"></script>
+  <script>
+    // Initialize Amplitude with plugins
+    console.log('Initializing Amplitude...');
+
+    console.log('Initializing Amplitude...');
+    amplitude.init('53215aeeb10f37c8ffd91a00bbcd3bb5', undefined, {
+      defaultTracking: {
+        sessions: true,       // Keep session tracking
+        pageViews: true,
+        formInteractions: false,
+        fileDownloads: false,
+        clicks: false
+      }
+    });
+    </script>
+       <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          console.log('DOM fully loaded and parsed');
+          // Add event listener to all elements with the class 'btn-download-cv'
+          var buttons = document.getElementsByClassName('btn btn-color-2');
+          if (buttons.length > 0) {
+            console.log('Buttons found, adding event listeners');
+            for (var i = 0; i < buttons.length; i++) {
+              buttons[i].addEventListener('click', function() {
+                console.log('Button clicked, logging event to Amplitude');
+                amplitude.track('cv downloaded', {
+                  button_name: 'Download Button',
+                  page: 'Homepage'
+                });
+              });
+            }
+          } else {
+            console.log('Buttons not found');
+          }
+        });
+      </script>
+      
+      <script>
+       document.addEventListener('DOMContentLoaded', function() {
+         console.log('DOM fully loaded and parsed');
+         // Add event listener to all elements with the class 'btn-download-cv'
+         var buttons = document.getElementsByClassName('btn2 btn-color-1');
+         if (buttons.length > 0) {
+           console.log('Buttons found, adding event listeners');
+           for (var i = 0; i < buttons.length; i++) {
+             buttons[i].addEventListener('click', function() {
+               console.log('Button clicked, logging event to Amplitude');
+               amplitude.track('contact info ', {
+                 button_name: 'contact info Button',
+                 page: 'Homepage'
+               });
+             });
+           }
+         } else {
+           console.log('Buttons not found');
+         }
+       });
+
+     </script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM fully loaded and parsed');
+    var image = document.getElementById('linkedin');
+    if (image) {
+      console.log('Image found, adding event listener');
+      image.addEventListener('click', function() {
+        console.log('Image clicked, logging event to Amplitude');
+        amplitude.track('linkedin shown', {
+          button_name: 'LinkedIn Image',
+          page: 'Homepage'
+        });
+      });
+    } else {
+      console.log('Image not found');
+    }
+  });
+</script>
+
+
+      
+
+
+
+
+
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My portfolio</title>
@@ -48,13 +138,13 @@
             <h1 class = "title"> Abdullah Nashat</h1>
             <p class = "section__text__p1">Data Analyst & Business Analyst</p>
         <div class = "btn-container" >
-            <button class="btn btn-color-2" onclick="window.open('./assets/Abdullah Nashat Resume.pdf')" style=" font-size: 18px; font-weight: 600; letter-spacing: 2px; font-family: 'Poppins', sans-serif;">Download CV</button>
-
+            <button class="btn btn-color-2" id="btn-download-cv" onclick="window.open('./assets/Abdullah Nashat Resume.pdf')" style=" font-size: 18px; font-weight: 600; letter-spacing: 2px; font-family: 'Poppins', sans-serif;">Download CV</button>
+            
             <button class= "btn2 btn-color-1" onclick="location.href= './#contact'" style=" font-size: 18px; font-weight: 600; letter-spacing: 2px; font-family: 'Poppins', sans-serif;">Contact Info</button>
         </div>
         <div id="social_container">
-            <img src="./assets/linkedin.png" alt="My linkedin profile" class = "icon" onclick="location.href = 'https://www.linkedin.com/in/n42at/'"/>
-            <img src="./assets/github.png" alt="My github profile" class = "icon" onclick="location.href = 'https://github.com/n42at'"/>
+            <img src="./assets/linkedin.png" alt="My linkedin profile" id = "linkedin" class = "icon" onclick="window.open('https://www.linkedin.com/in/n42at/')"/>
+            <img src="./assets/github.png" alt="My github profile" id = "github" class = "icon" onclick="location.href = 'https://github.com/n42at'"/>
         </div>
         
         </div>
