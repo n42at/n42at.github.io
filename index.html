@@ -35,6 +35,8 @@
                   page: 'Homepage'
                 });
               });
+              console.log('finished tracking, logging event to Amplitude');
+
             }
           } else {
             console.log('Buttons not found');
@@ -58,6 +60,7 @@
                });
              });
            }
+           console.log('finished tracking, logging event to Amplitude');
          } else {
            console.log('Buttons not found');
          }
@@ -78,9 +81,12 @@
           page: 'Homepage'
         });
       });
+      console.log('finished tracking, logging event to Amplitude');
+
     } else {
       console.log('Image not found');
     }
+
   });
 </script>
 
