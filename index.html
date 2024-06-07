@@ -17,13 +17,7 @@
       domain: 'n42at.github.io'
     });
 
-    amplitude.addEventListener('init', function() {
-      console.log('Amplitude initialized successfully');
-    });
-
-    amplitude.addEventListener('logEvent', function(event) {
-      console.log('Event logged:', event);
-    });
+    console.log('Amplitude initialized successfully');
   </script>
   <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -49,7 +43,7 @@
         page: 'Homepage'
       });
 
-      addEventListenerToElements('btn2 btn-color-1', 'contact info ', {
+      addEventListenerToElements('btn2 btn-color-1', 'contact info clicked', {
         button_name: 'Contact Info Button',
         page: 'Homepage'
       });
@@ -69,6 +63,7 @@
       }
     });
   </script>
+
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
