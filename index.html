@@ -1,13 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
+<html lang="en">
   <script src="https://cdn.amplitude.com/libs/analytics-browser-2.7.4-min.js.gz"></script>
   <script src="https://cdn.amplitude.com/libs/plugin-session-replay-browser-1.2.3-min.js.gz"></script>
   <script src="https://cdn.amplitude.com/libs/plugin-autocapture-browser-0.9.0-min.js.gz"></script>
   <script>
-    // Initialize Amplitude with plugins
-    console.log('Initializing Amplitude...');
-
     console.log('Initializing Amplitude...');
     amplitude.init('53215aeeb10f37c8ffd91a00bbcd3bb5', undefined, {
       defaultTracking: {
@@ -19,84 +16,59 @@
       },
       domain: 'n42at.github.io'
     });
-    </script>
-       <script>
-        document.addEventListener('DOMContentLoaded', function() {
-          console.log('DOM fully loaded and parsed');
-          // Add event listener to all elements with the class 'btn-download-cv'
-          var buttons = document.getElementsByClassName('btn btn-color-2');
-          if (buttons.length > 0) {
-            console.log('Buttons found, adding event listeners');
-            for (var i = 0; i < buttons.length; i++) {
-              buttons[i].addEventListener('click', function() {
-                console.log('Button clicked, logging event to Amplitude');
-                amplitude.track('cv downloaded', {
-                  button_name: 'Download Button',
-                  page: 'Homepage'
-                });
-              });
-              console.log('finished tracking, logging event to Amplitude');
 
-            }
-          } else {
-            console.log('Buttons not found');
+    amplitude.addEventListener('init', function() {
+      console.log('Amplitude initialized successfully');
+    });
+
+    amplitude.addEventListener('logEvent', function(event) {
+      console.log('Event logged:', event);
+    });
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      console.log('DOM fully loaded and parsed');
+
+      function addEventListenerToElements(className, eventName, eventProperties) {
+        var elements = document.getElementsByClassName(className);
+        if (elements.length > 0) {
+          console.log(`Elements with class ${className} found, adding event listeners`);
+          for (var i = 0; i < elements.length; i++) {
+            elements[i].addEventListener('click', function() {
+              console.log(`Element clicked, logging event to Amplitude: ${eventName}`);
+              amplitude.track(eventName, eventProperties);
+            });
           }
-        });
-      </script>
-      
-      <script>
-       document.addEventListener('DOMContentLoaded', function() {
-         console.log('DOM fully loaded and parsed');
-         // Add event listener to all elements with the class 'btn-download-cv'
-         var buttons = document.getElementsByClassName('btn2 btn-color-1');
-         if (buttons.length > 0) {
-           console.log('Buttons found, adding event listeners');
-           for (var i = 0; i < buttons.length; i++) {
-             buttons[i].addEventListener('click', function() {
-               console.log('Button clicked, logging event to Amplitude');
-               amplitude.track('contact info ', {
-                 button_name: 'contact info Button',
-                 page: 'Homepage'
-               });
-             });
-           }
-           console.log('finished tracking, logging event to Amplitude');
-         } else {
-           console.log('Buttons not found');
-         }
-       });
+        } else {
+          console.log(`Elements with class ${className} not found`);
+        }
+      }
 
-     </script>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    console.log('DOM fully loaded and parsed');
-    var image = document.getElementById('linkedin');
-    if (image) {
-      console.log('Image found, adding event listener');
-      image.addEventListener('click', function() {
-        console.log('Image clicked, logging event to Amplitude');
-        amplitude.track('linkedin shown', {
-          button_name: 'LinkedIn Image',
-          page: 'Homepage'
-        });
+      addEventListenerToElements('btn btn-color-2', 'cv downloaded', {
+        button_name: 'Download Button',
+        page: 'Homepage'
       });
-      console.log('finished tracking, logging event to Amplitude');
 
-    } else {
-      console.log('Image not found');
-    }
+      addEventListenerToElements('btn2 btn-color-1', 'contact info ', {
+        button_name: 'Contact Info Button',
+        page: 'Homepage'
+      });
 
-  });
-</script>
-
-
-      
-
-
-
-
-
+      var image = document.getElementById('linkedin');
+      if (image) {
+        console.log('LinkedIn image found, adding event listener');
+        image.addEventListener('click', function() {
+          console.log('LinkedIn image clicked, logging event to Amplitude');
+          amplitude.track('linkedin shown', {
+            button_name: 'LinkedIn Image',
+            page: 'Homepage'
+          });
+        });
+      } else {
+        console.log('LinkedIn image not found');
+      }
+    });
+  </script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
